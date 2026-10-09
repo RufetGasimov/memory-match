@@ -1,0 +1,45 @@
+body {
+    background-color: #f0f4f8;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.game-card {
+    width: 100px;
+    height: 100px;
+    background-color: #0d6efd;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card-front {
+    display: block;
+}
+
+.card-back {
+    display: none;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.game-card.open .card-front {
+    display: none;
+}
+
+.game-card.open .card-back {
+    display: block;
+}
